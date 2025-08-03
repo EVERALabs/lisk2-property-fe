@@ -19,13 +19,13 @@ interface TokenInfoProps {
 
 export default function TokenInfo({ token }: TokenInfoProps) {
   return (
-    <div className="rounded-xl bg-dark-200 p-6">
+    <div className="rounded-xl bg-white shadow-lg p-6">
       <div className="mb-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <FileText className="h-5 w-5" />
           <h2 className="text-xl font-bold">Token Information</h2>
         </div>
-        <Badge variant="purple">MIGRATED</Badge>
+        <Badge className="bg-[#14B8A6] text-white">MIGRATED</Badge>
       </div>
 
       <div className="flex flex-col gap-6 md:flex-row">
@@ -40,7 +40,7 @@ export default function TokenInfo({ token }: TokenInfoProps) {
           <div>
             <div className="mb-2 flex items-center gap-2">
               <span className="text-sm text-gray-400">Token</span>
-              <Badge variant="success" className="bg-green-500/10">
+              <Badge className="bg-[#E5F7F6] text-[#14B8A6]">
                 <CheckCircle className="mr-1 h-3 w-3" /> Verified
               </Badge>
             </div>

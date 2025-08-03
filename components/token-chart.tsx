@@ -24,11 +24,11 @@ export default function TokenChart() {
         context.clearRect(0, 0, ctx.width, ctx.height)
 
         // Background
-        context.fillStyle = "#111322"
+        context.fillStyle = "#ffffff"
         context.fillRect(0, 0, ctx.width, ctx.height)
 
         // Grid lines
-        context.strokeStyle = "#1a1c2e"
+        context.strokeStyle = "#e5e7eb"
         context.lineWidth = 1
 
         // Horizontal grid lines
@@ -59,7 +59,7 @@ export default function TokenChart() {
         }
 
         // Draw price line
-        context.strokeStyle = "#10b981"
+        context.strokeStyle = "#14B8A6"
         context.lineWidth = 2
         context.beginPath()
         context.moveTo(points[0].x, points[0].y)
@@ -76,7 +76,7 @@ export default function TokenChart() {
           const x = i * (ctx.width / 100)
           const y = ctx.height - height
 
-          context.fillStyle = Math.random() > 0.5 ? "#10b981" : "#ef4444"
+          context.fillStyle = Math.random() > 0.5 ? "#14B8A6" : "#ef4444"
           context.fillRect(x, y, (ctx.width / 100) * 2, height)
         }
 
