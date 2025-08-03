@@ -20,7 +20,7 @@ interface ProjectCardProps {
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Link href={`/token/${project.id}`}>
-      <div className="overflow-hidden rounded-xl bg-dark-200 transition-all hover:ring-1 hover:ring-purple-500">
+      <div className="overflow-hidden rounded-xl bg-white shadow-lg transition-all hover:shadow-xl hover:ring-1 hover:ring-[#14B8A6]">
         <div className="relative h-48 w-full">
           <Image src={project.image || "/placeholder.svg"} alt={project.name} fill className="object-cover" />
           {project.migrated && (
@@ -33,11 +33,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <h3 className="text-lg font-bold">{project.name}</h3>
           <div className="mt-2">
             <div className="text-sm text-gray-400">Market Cap</div>
-            <div className="text-lg font-bold text-white">{project.marketCap}</div>
+            <div className="text-lg font-bold text-gray-900">{project.marketCap}</div>
           </div>
 
           {project.migrated ? (
-            <div className="mt-4 rounded-md bg-dark-300 p-3">
+            <div className="mt-4 rounded-md bg-[#E5F7F6] p-3">
               <div className="flex items-center text-green-500">
                 <CheckCircle className="mr-2 h-4 w-4" />
                 <span className="text-sm font-medium">Migrated to liquidity pool</span>
@@ -48,9 +48,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             <div className="mt-4 space-y-2">
               <div className="flex items-center justify-between text-sm">
                 <span>Progress to Migration</span>
-                <span className="font-medium text-purple-400">{project.progress}%</span>
+                <span className="font-medium text-[#14B8A6]">{project.progress}%</span>
               </div>
-              <Progress value={project.progress} className="h-2 bg-dark-300" />
+              <Progress value={project.progress} className="h-2 bg-gray-100" indicatorClassName="bg-[#14B8A6]" />
               <div className="flex items-center justify-between text-xs text-gray-400">
                 <span>{project.tokensSold} tokens sold</span>
                 <span>{project.target} target</span>
